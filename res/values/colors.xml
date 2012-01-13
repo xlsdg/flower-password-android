@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="major">#168BC3</color>    <color name="minor">#FFFFFF</color>
+    <color name="selected">#FF881C</color>
+    <color name="action_bar_text">#FFFFFF</color>
+
+</resources>

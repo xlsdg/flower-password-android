@@ -2,13 +2,15 @@
 <resources>
 
     <style name="Theme.FlowerPassword" parent="Theme.Sherlock.Light">
-        <item name="abBackground">#168BC3</item>
+        <item name="android:windowBackground">@color/minor</item>
+        <item name="abBackground">@color/major</item>
         <item name="abTitleTextStyle">@style/TextAppearance.Widget.Title.FlowerPassword</item>
         <item name="abIcon">@drawable/home</item>
+        <item name="actionMenuTextColor">@color/action_bar_text</item>
     </style>
 
     <style name="TextAppearance.Widget.Title.FlowerPassword" parent="@style/TextAppearance.Widget.Title">
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/action_bar_text</item>
     </style>
 
 </resources>
