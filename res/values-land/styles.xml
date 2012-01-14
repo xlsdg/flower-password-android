@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.FlowerPassword.TextView.Input" parent="Widget.FlowerPassword.TextView">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Plus.Land" parent="Widget.FlowerPassword.TextView.Plus">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+    </style>
+
+</resources>
