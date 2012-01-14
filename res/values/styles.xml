@@ -85,6 +85,7 @@
     <style name="Widget.FlowerPassword.TextView.Hint" parent="Widget.FlowerPassword.TextView">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/hint_text</item>
+        <item name="android:singleLine">false</item>
     </style>
 
     <style name="Widget.FlowerPassword.TextView" parent="">
@@ -101,10 +102,12 @@
     <style name="Widget.FlowerPassword.TextView.Input.Password" parent="Widget.FlowerPassword.TextView.Input">
         <item name="android:inputType">textPassword</item>
         <item name="android:password">true</item>
+        <item name="android:maxLength">20</item>
     </style>
 
     <style name="Widget.FlowerPassword.TextView.Input.Key" parent="Widget.FlowerPassword.TextView.Input">
         <item name="android:inputType">text</item>
+        <item name="android:maxLength">15</item>
     </style>
 
     <style name="Widget.FlowerPassword.TextView.Output.Result" parent="Widget.FlowerPassword.TextView">

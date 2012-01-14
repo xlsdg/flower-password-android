@@ -13,5 +13,6 @@
     <string name="label_plus">+</string>
     <string name="hint_password">· 记忆密码：可选择一个简单易记的密码，用于生成其他高强度密码。</string>
     <string name="hint_key">· 区分代号：用于区别不同用途密码的简短代号，如淘宝账号可用“taobao”或“tb”等。</string>
+    <string name="toast_copy_success">复制成功</string>
 
 </resources>
