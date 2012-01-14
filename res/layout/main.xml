@@ -1,152 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    style="@style/Widget.FlowerPassword.ScrollView" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="15dip"
-        android:paddingLeft="15dip"
-        android:paddingRight="15dip" >
+    <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Main" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="15dip"
-            android:paddingTop="15dip" >
-
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Section" >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/major"
-                android:paddingBottom="5dip"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip"
-                android:paddingTop="5dip"
-                android:text="1"
-                android:textColor="@color/minor"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
+                style="@style/Widget.FlowerPassword.TextView.Section.Number"
+                android:text="@string/section_one_number" />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dip"
-                android:text="输入"
-                android:textColor="@color/major"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                style="@style/Widget.FlowerPassword.TextView.Section.Title"
+                android:text="@string/section_one_title" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dip"
-                android:text="记忆密码"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
+                style="@style/Widget.FlowerPassword.TextView.Label"
+                android:text="@string/label_password" />
             <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:password="true"
-                android:singleLine="true" >
-
+                android:id="@+id/edit_password"
+                style="@style/Widget.FlowerPassword.TextView.Input.Password" >
                 <requestFocus />
             </EditText>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="+"
-            android:textColor="@color/major"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
+            <TextView style="@style/Widget.FlowerPassword.TextView.Plus" />
+        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dip"
-                android:text="区分代号"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
+                style="@style/Widget.FlowerPassword.TextView.Label"
+                android:text="@string/label_key" />
             <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true" />
+                android:id="@+id/edit_key"
+                style="@style/Widget.FlowerPassword.TextView.Input.Key" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="15dip"
-            android:paddingTop="15dip" >
-
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Section" >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/major"
-                android:paddingBottom="5dip"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip"
-                android:paddingTop="5dip"
-                android:text="2"
-                android:textColor="@color/minor"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
+                style="@style/Widget.FlowerPassword.TextView.Section.Number"
+                android:text="@string/section_two_number" />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dip"
-                android:text="获取"
-                android:textColor="@color/major"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                style="@style/Widget.FlowerPassword.TextView.Section.Title"
+                android:text="@string/section_two_title" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
             <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/result"
-                android:editable="false"
-                android:gravity="center"
-                android:singleLine="true"
-                android:text="K60855D593F732ec"
-                android:textSize="18sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/copy_button"
-                android:padding="10dip"
-                android:text="点击复制"
-                android:textColor="@color/minor"
-                android:textSize="18sp" />
+                android:id="@+id/edit_result"
+                style="@style/Widget.FlowerPassword.TextView.Output.Result" />
+            <RelativeLayout style="@style/Widget.FlowerPassword.RelativeLayout.Copy" >
+                <Button
+                    android:id="@+id/button_copy"
+                    style="@style/Widget.FlowerPassword.Button.Copy"
+                    android:text="@string/button_copy" />
+            </RelativeLayout>
         </LinearLayout>
+
+        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Hint" >
+            <TextView
+                style="@style/Widget.FlowerPassword.TextView.Hint"
+                android:text="@string/hint_password" />
+            <TextView
+                style="@style/Widget.FlowerPassword.TextView.Hint"
+                android:text="@string/hint_key" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

@@ -3,6 +3,9 @@
 
     <color name="major">#168BC3</color>    <color name="minor">#FFFFFF</color>
     <color name="selected">#FF881C</color>
-    <color name="action_bar_text">#FFFFFF</color>
+    <color name="action_bar_text">@color/minor</color>
+    <color name="label_text">#000</color>
+    <color name="edit_text">#000</color>
+    <color name="hint_text">#999</color>
 
 </resources>

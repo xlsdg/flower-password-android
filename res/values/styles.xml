@@ -13,4 +13,123 @@
         <item name="android:textColor">@color/action_bar_text</item>
     </style>
 
+    <style name="Widget.FlowerPassword.ScrollView" parent="">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.LinearLayout" parent="">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.LinearLayout.Main" parent="Widget.FlowerPassword.LinearLayout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.LinearLayout.Line" parent="Widget.FlowerPassword.LinearLayout">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.LinearLayout.Section" parent="Widget.FlowerPassword.LinearLayout.Line">
+        <item name="android:paddingTop">15dip</item>
+        <item name="android:paddingBottom">15dip</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.LinearLayout.Hint" parent="Widget.FlowerPassword.LinearLayout.Section">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Section" parent="Widget.FlowerPassword.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Section.Number" parent="Widget.FlowerPassword.TextView.Section">
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingBottom">5dip</item>
+        <item name="android:background">@color/major</item>
+        <item name="android:textColor">@color/minor</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Section.Title" parent="Widget.FlowerPassword.TextView.Section">
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:textColor">@color/major</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Label" parent="Widget.FlowerPassword.TextView">
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/label_text</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Plus" parent="Widget.FlowerPassword.TextView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/major</item>
+        <item name="android:text">@string/label_plus</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Hint" parent="Widget.FlowerPassword.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/hint_text</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView" parent="">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/edit_text</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Input" parent="Widget.FlowerPassword.TextView">
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Input.Password" parent="Widget.FlowerPassword.TextView.Input">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:password">true</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Input.Key" parent="Widget.FlowerPassword.TextView.Input">
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.TextView.Output.Result" parent="Widget.FlowerPassword.TextView">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/result</item>
+        <item name="android:inputType">none</item>
+        <item name="android:editable">false</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.RelativeLayout.Copy" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="Widget.FlowerPassword.Button.Copy" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:background">@color/copy_button</item>
+        <item name="android:textColor">@color/minor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

@@ -2,5 +2,16 @@
 <resources>
 
     <string name="app_name">花密</string>
+    <string name="menu_item_reset">重置</string>
+    <string name="section_one_number">1</string>
+    <string name="section_one_title">输入</string>
+    <string name="section_two_number">2</string>
+    <string name="section_two_title">获取</string>
+    <string name="button_copy">点击复制</string>
+    <string name="label_password">记忆密码</string>
+    <string name="label_key">区分代号</string>
+    <string name="label_plus">+</string>
+    <string name="hint_password">· 记忆密码：可选择一个简单易记的密码，用于生成其他高强度密码。</string>
+    <string name="hint_key">· 区分代号：用于区别不同用途密码的简短代号，如淘宝账号可用“taobao”或“tb”等。</string>
 
 </resources>
