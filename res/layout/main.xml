@@ -3,70 +3,9 @@
     style="@style/Widget.FlowerPassword.ScrollView" >
 
     <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Main" >
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Section" >
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Section.Number"
-                android:text="@string/section_one_number" />
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Section.Title"
-                android:text="@string/section_one_title" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Label"
-                android:text="@string/label_password" />
-            <EditText
-                android:id="@+id/edit_password"
-                style="@style/Widget.FlowerPassword.TextView.Input.Password" >
-                <requestFocus />
-            </EditText>
-        </LinearLayout>
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
-            <TextView style="@style/Widget.FlowerPassword.TextView.Plus" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Label"
-                android:text="@string/label_key" />
-            <EditText
-                android:id="@+id/edit_key"
-                style="@style/Widget.FlowerPassword.TextView.Input.Key" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Section" >
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Section.Number"
-                android:text="@string/section_two_number" />
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Section.Title"
-                android:text="@string/section_two_title" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
-            <EditText
-                android:id="@+id/edit_result"
-                style="@style/Widget.FlowerPassword.TextView.Output.Result" />
-            <RelativeLayout style="@style/Widget.FlowerPassword.RelativeLayout.Copy" >
-                <Button
-                    android:id="@+id/button_copy"
-                    style="@style/Widget.FlowerPassword.Button.Copy"
-                    android:text="@string/button_copy" />
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Hint" >
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Hint"
-                android:text="@string/hint_password" />
-            <TextView
-                style="@style/Widget.FlowerPassword.TextView.Hint"
-                android:text="@string/hint_key" />
-        </LinearLayout>
-
+        <include layout="@layout/section_1" />
+        <include layout="@layout/section_2" />
+        <include layout="@layout/section_hint" />
     </LinearLayout>
 
 </ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.FlowerPassword.LinearLayout.Section" >
+
+    <TextView
+        style="@style/Widget.FlowerPassword.TextView.Section.Number"
+        android:text="@string/section_one_number" />
+
+    <TextView
+        style="@style/Widget.FlowerPassword.TextView.Section.Title"
+        android:text="@string/section_one_title" />
+
+</LinearLayout>

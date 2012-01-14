@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.FlowerPassword.LinearLayout.Hint" >
+
+    <TextView
+        style="@style/Widget.FlowerPassword.TextView.Hint"
+        android:text="@string/hint_password" />
+
+    <TextView
+        style="@style/Widget.FlowerPassword.TextView.Hint"
+        android:text="@string/hint_key" />
+
+</LinearLayout>

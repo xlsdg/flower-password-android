@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.FlowerPassword.LinearLayout.Line" >
+
+    <EditText
+        android:id="@+id/edit_result"
+        style="@style/Widget.FlowerPassword.TextView.Output.Result" />
+
+    <RelativeLayout style="@style/Widget.FlowerPassword.RelativeLayout.Copy" >
+        <Button
+            android:id="@+id/button_copy"
+            style="@style/Widget.FlowerPassword.Button.Copy"
+            android:text="@string/button_copy" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
+        <TextView
+            style="@style/Widget.FlowerPassword.TextView.Label"
+            android:text="@string/label_password" />
+        <EditText
+            android:id="@+id/edit_password"
+            style="@style/Widget.FlowerPassword.TextView.Input.Password" >
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
+        <TextView style="@style/Widget.FlowerPassword.TextView.Plus" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/Widget.FlowerPassword.LinearLayout.Line" >
+        <TextView
+            style="@style/Widget.FlowerPassword.TextView.Label"
+            android:text="@string/label_key" />
+        <EditText
+            android:id="@+id/edit_key"
+            style="@style/Widget.FlowerPassword.TextView.Input.Key" />
+    </LinearLayout>
+
+</merge>
