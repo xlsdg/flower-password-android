@@ -1,5 +1,8 @@
 package com.fpassword.android;
 
+import static java.lang.Character.isDigit;
+import static java.lang.Character.toUpperCase;
+
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.Key;
@@ -18,6 +21,9 @@ public class FlowerPassword {
 
     private static final String HMAC_MD5 = "HmacMD5";
 
+    private static final char[] DIGITS_LOWER = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd',
+            'e', 'f' };
+
     public static String encrypt(String passwordText, String keyText) {
         if (passwordText.length() > 0 && keyText.length() > 0) {
             try {
@@ -28,16 +34,16 @@ public class FlowerPassword {
                 StringBuilder source = new StringBuilder(md5two);
                 final String str = "sunlovesnow1990090127xykab";
                 for (int i = 0; i <= 31; ++i) {
-                    if (!Character.isDigit(source.charAt(i))) {
+                    if (!isDigit(source.charAt(i))) {
                         if (str.indexOf(rule.charAt(i)) > -1) {
-                            source.setCharAt(i, Character.toUpperCase(source.charAt(i)));
+                            source.setCharAt(i, toUpperCase(source.charAt(i)));
                         }
                     }
                 }
                 String code32 = source.toString();
                 char code1 = code32.charAt(0);
                 String code16 = null;
-                if (!Character.isDigit(code1)) {
+                if (!isDigit(code1)) {
                     code16 = code32.substring(0, 16);
                 } else {
                     code16 = "K" + code32.substring(1, 16);
@@ -68,8 +74,8 @@ public class FlowerPassword {
         int l = data.length;
         char[] out = new char[l << 1];
         for (int i = 0, j = 0; i < l; i++) {
-            out[j++] = Integer.toHexString((0xF0 & data[i]) >>> 4).charAt(0);
-            out[j++] = Integer.toHexString(0x0F & data[i]).charAt(0);
+            out[j++] = DIGITS_LOWER[(0xF0 & data[i]) >>> 4];
+            out[j++] = DIGITS_LOWER[0x0F & data[i]];
         }
         return new String(out);
     }
