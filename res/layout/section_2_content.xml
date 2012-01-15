@@ -4,7 +4,7 @@
 
     <EditText
         android:id="@+id/edit_result"
-        style="@style/Widget.FlowerPassword.TextView.Output.Result" />
+        style="@style/Widget.FlowerPassword.EditText.Output.Result" />
 
     <RelativeLayout style="@style/Widget.FlowerPassword.RelativeLayout.Copy" >
         <Button

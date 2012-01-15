@@ -7,7 +7,7 @@
             android:text="@string/label_password" />
         <EditText
             android:id="@+id/edit_password"
-            style="@style/Widget.FlowerPassword.TextView.Input.Password" >
+            style="@style/Widget.FlowerPassword.EditText.Input.Password" >
             <requestFocus />
         </EditText>
     </LinearLayout>
@@ -22,7 +22,7 @@
             android:text="@string/label_key" />
         <EditText
             android:id="@+id/edit_key"
-            style="@style/Widget.FlowerPassword.TextView.Input.Key" />
+            style="@style/Widget.FlowerPassword.EditText.Input.Key" />
     </LinearLayout>
 
 </merge>

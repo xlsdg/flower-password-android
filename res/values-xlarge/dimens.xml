@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="main_padding_width">40dip</dimen>
+    <dimen name="section_padding_height">30dip</dimen>
+    <dimen name="plus_padding_width">20dip</dimen>
+    <dimen name="button_padding_width">20dip</dimen>
+    <dimen name="section_text_size">26sp</dimen>
+    <dimen name="content_text_size">24sp</dimen>
+    <dimen name="plus_text_size">34sp</dimen>
+    <dimen name="hint_text_size">20sp</dimen>
+
+</resources>
