@@ -1,5 +1,8 @@
 package com.fpassword.android;
 
+import com.fpassword.core.EncryptionException;
+import com.fpassword.core.FlowerPassword;
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.Menu;
@@ -7,6 +10,7 @@ import android.support.v4.view.MenuItem;
 import android.text.ClipboardManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,31 +21,13 @@ import android.widget.Toast;
 @SuppressWarnings("deprecation")
 public class MainActivity extends FragmentActivity {
 
+    private static final String TAG = MainActivity.class.getName();
+
     private EditText editPassword;
 
     private EditText editKey;
 
     private EditText editResult;
-
-    private final TextWatcher textWatcher = new TextWatcher() {
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            String passwordText = editPassword.getText().toString();
-            String keyText = editKey.getText().toString();
-            String resultText = FlowerPassword.encrypt(passwordText, keyText);
-            editResult.setText(resultText);
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +39,22 @@ public class MainActivity extends FragmentActivity {
         editResult = (EditText) findViewById(R.id.edit_result);
         final Button buttonCopy = (Button) findViewById(R.id.button_copy);
 
+        final TextWatcher textWatcher = new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                encryptPasswordWithKey();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+        };
         editPassword.addTextChangedListener(textWatcher);
         editKey.addTextChangedListener(textWatcher);
         buttonCopy.setOnClickListener(new OnClickListener() {
@@ -63,6 +65,18 @@ public class MainActivity extends FragmentActivity {
             }
 
         });
+    }
+
+    private void encryptPasswordWithKey() {
+        String passwordText = editPassword.getText().toString();
+        String keyText = editKey.getText().toString();
+        String resultText = "";
+        try {
+            resultText = FlowerPassword.encrypt(passwordText, keyText);
+        } catch (EncryptionException e) {
+            Log.e(TAG, e.getMessage(), e);
+        }
+        editResult.setText(resultText);
     }
 
     private void copyResultToClipboard() {

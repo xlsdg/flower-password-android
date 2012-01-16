@@ -1,4 +1,4 @@
-package com.fpassword.android;
+package com.fpassword.core;
 
 import static java.lang.Character.isDigit;
 import static java.lang.Character.toUpperCase;
@@ -11,11 +11,7 @@ import java.security.NoSuchAlgorithmException;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
-import android.util.Log;
-
 public class FlowerPassword {
-
-    private static final String TAG = FlowerPassword.class.getName();
 
     private static final String UTF_8 = "UTF-8";
 
@@ -24,7 +20,7 @@ public class FlowerPassword {
     private static final char[] DIGITS_LOWER = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd',
             'e', 'f' };
 
-    public static String encrypt(String passwordText, String keyText) {
+    public static String encrypt(String passwordText, String keyText) throws EncryptionException {
         if (passwordText.length() > 0 && keyText.length() > 0) {
             try {
                 String md5one = hmacMd5(passwordText, keyText);
@@ -50,7 +46,8 @@ public class FlowerPassword {
                 }
                 return code16;
             } catch (Exception e) {
-                Log.e(TAG, e.getMessage(), e);
+                throw new EncryptionException(String.format(
+                        "Error occured while encrypting password \"%s\" with key \"%s\"", passwordText, keyText), e);
             }
         }
         return "";
