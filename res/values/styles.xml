@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.FlowerPassword" parent="Theme.Sherlock.Light">
+    <style name="Theme.Sherlock.Light.DarkActionBar" parent="Theme.Sherlock.Light"></style>
+    <style name="Theme.FlowerPassword" parent="Theme.Sherlock.Light.DarkActionBar">
         <item name="android:windowBackground">@color/minor</item>
         <item name="abBackground">@color/major</item>
         <item name="abTitleTextStyle">@style/TextAppearance.Widget.Title.FlowerPassword</item>

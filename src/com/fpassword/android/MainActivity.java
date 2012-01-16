@@ -2,6 +2,7 @@ package com.fpassword.android;
 
 import static com.fpassword.android.Helper.getStringOnCursor;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -161,9 +162,16 @@ public class MainActivity extends FragmentActivity {
         case R.id.menu_item_reset:
             resetPasswordAndKey();
             return true;
+        case R.id.menu_item_options:
+            showOptions();
+            return true;
         default:
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void showOptions() {
+        startActivity(new Intent(this, OptionsActivity.class));
     }
 
 }

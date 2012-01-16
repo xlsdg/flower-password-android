@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="Theme.Sherlock.Light.DarkActionBar" parent="Theme.Sherlock.Light">
+        <!-- Action bar styles -->
+        <item name="android:actionDropDownStyle">@style/Widget.Sherlock.Spinner</item>
+        <item name="android:actionButtonStyle">@style/Widget.Sherlock.ActionButton</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.Sherlock.ActionButton.Overflow</item>
+        <item name="android:actionModeBackground">@drawable/abs__cab_background_holo_dark</item>
+        <item name="android:actionModeCloseDrawable">@drawable/abs__cab_ic_close_holo</item>
+        <item name="android:actionBarTabStyle">@style/Widget.Sherlock.ActionBar.TabView</item>
+        <item name="android:actionBarTabBarStyle">@style/Widget.Sherlock.ActionBar.TabBar</item>
+        <item name="android:actionBarTabTextStyle">@style/Widget.Sherlock.ActionBar.TabText</item>
+        <item name="android:actionModeCloseButtonStyle">@style/Widget.Sherlock.ActionButton.CloseMode</item>
+
+        <item name="android:actionModeCutDrawable">@drawable/ic_menu_cut_holo_dark</item>
+        <item name="android:actionModeCopyDrawable">@drawable/ic_menu_copy_holo_dark</item>
+        <item name="android:actionModePasteDrawable">@drawable/ic_menu_paste_holo_dark</item>
+        <item name="android:actionModeSelectAllDrawable">@drawable/ic_menu_selectall_holo_dark</item>
+
+        <item name="android:dividerVertical">?android:attr/listDivider</item>
+        <item name="android:dividerHorizontal">?android:attr/listDivider</item>
+        <item name="android:buttonBarStyle">@android:style/Holo.ButtonBar</item>
+        <item name="android:buttonBarButtonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="android:segmentedButtonStyle">@android:style/Holo.SegmentedButton</item>
+    </style>
+    
+</resources>

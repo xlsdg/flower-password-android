@@ -13,13 +13,17 @@
         android:label="@string/app_name" >
         <activity
             android:name="MainActivity"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.FlowerPassword" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="OptionsActivity"
+            android:label="@string/options_name"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

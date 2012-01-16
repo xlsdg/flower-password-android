@@ -2,7 +2,9 @@
 <resources>
 
     <string name="app_name">花密</string>
+    <string name="options_name">设置</string>
     <string name="menu_item_reset">重置</string>
+    <string name="menu_item_options">设置</string>
     <string name="section_one_number">1</string>
     <string name="section_one_title">输入</string>
     <string name="section_two_number">2</string>

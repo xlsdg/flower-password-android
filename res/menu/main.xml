@@ -7,5 +7,10 @@
         android:showAsAction="ifRoom|withText"
         android:title="@string/menu_item_reset">
     </item>
+    <item
+        android:id="@+id/menu_item_options"
+        android:icon="@drawable/options"
+        android:title="@string/menu_item_options">
+    </item>
 
 </menu>
