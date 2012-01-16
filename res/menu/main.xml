@@ -3,13 +3,13 @@
 
     <item
         android:id="@+id/menu_item_reset"
-        android:icon="@drawable/reset"
+        android:icon="@drawable/ic_menu_reset"
         android:showAsAction="ifRoom|withText"
         android:title="@string/menu_item_reset">
     </item>
     <item
         android:id="@+id/menu_item_options"
-        android:icon="@drawable/options"
+        android:icon="@drawable/ic_menu_options"
         android:title="@string/menu_item_options">
     </item>
 
