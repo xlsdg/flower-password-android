@@ -20,7 +20,7 @@
         <TextView
             style="@style/Widget.FlowerPassword.TextView.Label"
             android:text="@string/label_key" />
-        <EditText
+        <com.fpassword.android.InstantAutoCompleteTextView
             android:id="@+id/edit_key"
             style="@style/Widget.FlowerPassword.EditText.Input.Key" />
     </LinearLayout>
