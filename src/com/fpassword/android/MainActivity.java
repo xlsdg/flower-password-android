@@ -1,14 +1,15 @@
 package com.fpassword.android;
 
 import static com.fpassword.android.Helper.getStringOnCursor;
+import android.content.Context;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.Menu;
 import android.support.v4.view.MenuItem;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.support.v4.widget.SimpleCursorAdapter.CursorToStringConverter;
+import android.support.v4.widget.CursorAdapter;
+import android.support.v4.widget.ResourceCursorAdapter;
 import android.text.ClipboardManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,6 +20,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FilterQueryProvider;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fpassword.android.Database.Keys;
@@ -37,6 +39,8 @@ public class MainActivity extends FragmentActivity {
     private InstantAutoCompleteTextView editKey;
 
     private EditText editResult;
+
+    private CursorAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,16 +81,22 @@ public class MainActivity extends FragmentActivity {
 
         });
 
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.key_list_item, null,
-                new String[] { Keys.COLUMN_USED_KEY }, new int[] { R.id.key_list_item }, 0);
-        adapter.setCursorToStringConverter(new CursorToStringConverter() {
+        adapter = new ResourceCursorAdapter(this, R.layout.key_list_item, null, false) {
+
+            @Override
+            public void bindView(View view, Context context, Cursor cursor) {
+                if (cursor != null) {
+                    TextView item = (TextView) view.findViewById(R.id.key_list_item);
+                    item.setText(convertToString(cursor));
+                }
+            }
 
             @Override
             public CharSequence convertToString(Cursor cursor) {
                 return getStringOnCursor(cursor, Keys.COLUMN_USED_KEY);
             }
 
-        });
+        };
         adapter.setFilterQueryProvider(new FilterQueryProvider() {
 
             @Override
@@ -100,6 +110,7 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onDestroy() {
+        adapter.changeCursor(null);
         database.close();
         super.onDestroy();
     }
