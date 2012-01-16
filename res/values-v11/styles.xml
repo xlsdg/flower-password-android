@@ -16,7 +16,6 @@
         <item name="android:actionModeCutDrawable">@drawable/ic_menu_cut_holo_dark</item>
         <item name="android:actionModeCopyDrawable">@drawable/ic_menu_copy_holo_dark</item>
         <item name="android:actionModePasteDrawable">@drawable/ic_menu_paste_holo_dark</item>
-        <!-- <item name="android:actionModeSelectAllDrawable">@drawable/ic_menu_selectall_holo_dark</item> -->
     </style>
     
 </resources>

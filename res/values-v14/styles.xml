@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
-    <style name="Theme.Sherlock.Light.DarkActionBar" parent="Theme.Sherlock.Light">
-        <!-- Action bar styles -->
-        <item name="android:actionDropDownStyle">@style/Widget.Sherlock.Spinner</item>
-        <item name="android:actionButtonStyle">@style/Widget.Sherlock.ActionButton</item>
-        <item name="android:actionOverflowButtonStyle">@style/Widget.Sherlock.ActionButton.Overflow</item>
-        <item name="android:actionModeBackground">@drawable/abs__cab_background_holo_dark</item>
-        <item name="android:actionModeCloseDrawable">@drawable/abs__cab_ic_close_holo</item>
-        <item name="android:actionBarTabStyle">@style/Widget.Sherlock.ActionBar.TabView</item>
-        <item name="android:actionBarTabBarStyle">@style/Widget.Sherlock.ActionBar.TabBar</item>
-        <item name="android:actionBarTabTextStyle">@style/Widget.Sherlock.ActionBar.TabText</item>
-        <item name="android:actionModeCloseButtonStyle">@style/Widget.Sherlock.ActionButton.CloseMode</item>
 
-        <item name="android:actionModeCutDrawable">@drawable/ic_menu_cut_holo_dark</item>
-        <item name="android:actionModeCopyDrawable">@drawable/ic_menu_copy_holo_dark</item>
-        <item name="android:actionModePasteDrawable">@drawable/ic_menu_paste_holo_dark</item>
-        <item name="android:actionModeSelectAllDrawable">@drawable/ic_menu_selectall_holo_dark</item>
+    <style name="Theme.Sherlock.Light.DarkActionBar" parent="android:Theme.Holo.Light.DarkActionBar"></style>
+
+    <style name="Theme.FlowerPassword" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/minor</item>
+        <item name="android:actionBarStyle">@style/Widget.FlowerPassword.ActionBar</item>
+        <item name="android:actionMenuTextColor">@color/action_bar_text</item>
     </style>
-    
+
+    <style name="Widget.FlowerPassword.ActionBar" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/major</item>
+        <item name="android:icon">@drawable/ic_home</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.Widget.Title.FlowerPassword</item>
+    </style>
+
 </resources>
