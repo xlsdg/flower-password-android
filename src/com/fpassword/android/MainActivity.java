@@ -139,20 +139,23 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void copyResultToClipboard() {
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-        clipboard.setText(editResult.getText());
-        Toast.makeText(this, R.string.toast_copy_success, Toast.LENGTH_SHORT).show();
+        Editable resultText = editResult.getText();
+        if (resultText.length() > 0) {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            clipboard.setText(resultText);
+            Toast.makeText(this, R.string.toast_copy_success, Toast.LENGTH_SHORT).show();
 
-        if (isSaveKeys()) {
-            new AsyncTask<String, Void, Void>() {
+            if (isSaveKeys()) {
+                new AsyncTask<String, Void, Void>() {
 
-                @Override
-                protected Void doInBackground(String... params) {
-                    database.insertOrUpdateUsedKey(params[0]);
-                    return null;
-                }
+                    @Override
+                    protected Void doInBackground(String... params) {
+                        database.insertOrUpdateUsedKey(params[0]);
+                        return null;
+                    }
 
-            }.execute(editKey.getText().toString());
+                }.execute(editKey.getText().toString());
+            }
         }
     }
 
