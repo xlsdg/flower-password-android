@@ -19,9 +19,13 @@
     <string name="toast_copy_success">复制成功</string>
     <string name="toast_clear_keys_success">已清空区分代号</string>
     <string name="preference_title_keys">区分代号</string>
-    <string name="preference_title_save_keys">自动保存区分代号</string>
+    <string name="preference_title_save_keys">保存区分代号</string>
     <string name="preference_title_clear_keys">清空区分代号</string>
     <string name="preference_summary_save_keys">自动保存并列出使用过的区分代号</string>
     <string name="preference_summary_clear_keys">清空已保存的区分代号</string>
+    <string name="dialog_title_confirm_clear_keys">清空区分代号</string>
+    <string name="dialog_message_confirm_clear_keys">是否确定清空已保存的区分代号？该操作不可撤销。</string>
+    <string name="dialog_button_yes">是</string>
+    <string name="dialog_button_no">否</string>
 
 </resources>

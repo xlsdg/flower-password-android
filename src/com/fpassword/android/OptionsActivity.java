@@ -1,5 +1,7 @@
 package com.fpassword.android;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -40,20 +42,30 @@ public class OptionsActivity extends PreferenceActivity {
     }
 
     private void clearKeys() {
-        new AsyncTask<Void, Void, Void>() {
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle(R.string.dialog_title_confirm_clear_keys)
+                .setMessage(R.string.dialog_message_confirm_clear_keys)
+                .setPositiveButton(R.string.dialog_button_yes, new DialogInterface.OnClickListener() {
 
-            @Override
-            protected Void doInBackground(Void... params) {
-                database.deleteKeys();
-                return null;
-            }
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        new AsyncTask<Void, Void, Void>() {
 
-            @Override
-            protected void onPostExecute(Void result) {
-                Toast.makeText(OptionsActivity.this, R.string.toast_clear_keys_success, Toast.LENGTH_SHORT).show();
-            }
+                            @Override
+                            protected Void doInBackground(Void... params) {
+                                database.deleteKeys();
+                                return null;
+                            }
 
-        }.execute();
+                            @Override
+                            protected void onPostExecute(Void result) {
+                                Toast.makeText(OptionsActivity.this, R.string.toast_clear_keys_success,
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
+                        }.execute();
+                    }
+
+                }).setNegativeButton(R.string.dialog_button_no, null).show();
     }
 
 }

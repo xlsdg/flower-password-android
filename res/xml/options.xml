@@ -9,8 +9,8 @@
             android:title="@string/preference_title_save_keys" />
         <Preference
             android:key="clear_keys"
-            android:summary="@string/preference_title_clear_keys"
-            android:title="@string/preference_summary_clear_keys" />
+            android:summary="@string/preference_summary_clear_keys"
+            android:title="@string/preference_title_clear_keys" />
     </PreferenceCategory>
 
 </PreferenceScreen>
