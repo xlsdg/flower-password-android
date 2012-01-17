@@ -5,12 +5,14 @@
         android:id="@+id/menu_item_reset"
         android:icon="@drawable/ic_menu_reset"
         android:showAsAction="ifRoom|withText"
-        android:title="@string/menu_item_reset">
-    </item>
+        android:title="@string/menu_item_reset"/>
     <item
         android:id="@+id/menu_item_options"
         android:icon="@drawable/ic_menu_options"
-        android:title="@string/menu_item_options">
-    </item>
+        android:title="@string/menu_item_options"/>
+    <item
+        android:id="@+id/menu_item_about"
+        android:icon="@drawable/ic_menu_about"
+        android:title="@string/menu_item_about"/>
 
 </menu>
