@@ -96,4 +96,8 @@ public class Database {
                 selectionArgs, null, null, Keys.COLUMN_LAST_USED + " desc", "10");
     }
 
+    public void deleteKeys() {
+        db.delete(Keys.TABLE_NAME, null, null);
+    }
+
 }

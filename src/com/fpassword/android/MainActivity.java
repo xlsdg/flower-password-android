@@ -3,9 +3,11 @@ package com.fpassword.android;
 import static com.fpassword.android.Helper.getStringOnCursor;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.Menu;
 import android.support.v4.view.MenuItem;
@@ -42,6 +44,8 @@ public class MainActivity extends FragmentActivity {
     private EditText editResult;
 
     private CursorAdapter adapter;
+
+    private SharedPreferences preferences;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -102,11 +106,17 @@ public class MainActivity extends FragmentActivity {
 
             @Override
             public Cursor runQuery(CharSequence constraint) {
-                return database.queryUsedKeys(constraint != null ? constraint.toString() : null);
+                if (isSaveKeys()) {
+                    return database.queryUsedKeys(constraint != null ? constraint.toString() : null);
+                } else {
+                    return null;
+                }
             }
 
         });
         editKey.setAdapter(adapter);
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     @Override
@@ -133,15 +143,17 @@ public class MainActivity extends FragmentActivity {
         clipboard.setText(editResult.getText());
         Toast.makeText(this, R.string.toast_copy_success, Toast.LENGTH_SHORT).show();
 
-        new AsyncTask<String, Void, Void>() {
+        if (isSaveKeys()) {
+            new AsyncTask<String, Void, Void>() {
 
-            @Override
-            protected Void doInBackground(String... params) {
-                database.insertOrUpdateUsedKey(params[0]);
-                return null;
-            }
+                @Override
+                protected Void doInBackground(String... params) {
+                    database.insertOrUpdateUsedKey(params[0]);
+                    return null;
+                }
 
-        }.execute(editKey.getText().toString());
+            }.execute(editKey.getText().toString());
+        }
     }
 
     private void resetPasswordAndKey() {
@@ -172,6 +184,10 @@ public class MainActivity extends FragmentActivity {
 
     private void showOptions() {
         startActivity(new Intent(this, OptionsActivity.class));
+    }
+
+    private boolean isSaveKeys() {
+        return preferences.getBoolean(OptionsActivity.KEY_SAVE_KEYS, true);
     }
 
 }

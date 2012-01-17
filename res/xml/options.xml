@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <PreferenceCategory android:title="区分代号" >
+    <PreferenceCategory android:title="@string/preference_title_keys" >
         <CheckBoxPreference
             android:defaultValue="true"
-            android:summary="自动保存并列出使用过的区分代号"
-            android:title="自动保存区分代号" />
+            android:key="save_keys"
+            android:summary="@string/preference_summary_save_keys"
+            android:title="@string/preference_title_save_keys" />
         <Preference
-            android:summary="清空已保存的区分代号"
-            android:title="清空区分代号" />
+            android:key="clear_keys"
+            android:summary="@string/preference_title_clear_keys"
+            android:title="@string/preference_summary_clear_keys" />
     </PreferenceCategory>
 
 </PreferenceScreen>
