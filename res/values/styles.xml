@@ -103,12 +103,10 @@
     <style name="Widget.FlowerPassword.EditText.Input.Password" parent="Widget.FlowerPassword.EditText.Input">
         <item name="android:inputType">textPassword</item>
         <item name="android:password">true</item>
-        <item name="android:maxLength">20</item>
     </style>
 
     <style name="Widget.FlowerPassword.EditText.Input.Key" parent="Widget.FlowerPassword.EditText.Input">
         <item name="android:inputType">text</item>
-        <item name="android:maxLength">15</item>
     </style>
 
     <style name="Widget.FlowerPassword.EditText.Output.Result" parent="Widget.FlowerPassword.EditText">
